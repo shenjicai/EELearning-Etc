@@ -1,0 +1,146 @@
+﻿<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram id="control-flow" name="控制方法流程图">
+    <mxGraphModel dx="666" dy="311" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1300" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" value="功率设备的控制方法流程图 (专利 Fig.2 + 权利要求)" vertex="1">
+          <mxGeometry height="35" width="600" x="150" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="60" width="300" x="300" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="start-text" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" value="S201: 获取各功率模块的运行温度 `T_mod`&lt;br&gt;以及壳体内的环境温度 `T_{amb}`" vertex="1">
+          <mxGeometry height="50" width="300" x="300" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="arr1" edge="1" parent="1" source="start" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none" target="calc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="calc" parent="1" style="fontFamily=宋体;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="45" width="280" x="310" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="calc-text" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" value="计算温差: `ΔT = T_{amb} − T_mod`" vertex="1">
+          <mxGeometry height="35" width="280" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="arr2" edge="1" parent="1" source="calc" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none" target="decision-main" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-main" parent="1" style="fontFamily=宋体;rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="280" x="310" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-main-text" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#7f6000;" value="是否存在功率模块&#xa;ΔT &gt; 5°C ?" vertex="1">
+          <mxGeometry height="56" width="240" x="330" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-no" edge="1" parent="1" source="decision-main" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none" target="normal-state" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-no" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#82b366;" value="否" vertex="1">
+          <mxGeometry height="20" width="30" x="220" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="normal-state" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="55" width="120" x="60" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="normal-text" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#333333;" value="模式 0: 正常&#xa;逐步恢复 V_bus&#xa;逐步恢复 Fan" vertex="1">
+          <mxGeometry height="50" width="120" x="60" y="264.5" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-yes" edge="1" parent="1" source="decision-main" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#b85450;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none" target="decision-second" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-yes" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#b85450;" value="是 (存在凝露风险)" vertex="1">
+          <mxGeometry height="35" width="130" x="455" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-second" parent="1" style="fontFamily=宋体;rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="65" width="280" x="310" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-second-text" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#b85450;" value="ΔT &gt; 8°C ?" vertex="1">
+          <mxGeometry height="35" width="200" x="350" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-mode1" edge="1" parent="1" source="decision-second" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#d79b00;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none" target="mode1-box" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="413" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-mode1" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#d79b00;" value="5 &lt; ΔT ≤ 8°C" vertex="1">
+          <mxGeometry height="35" width="90" x="190" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="mode1-box" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="170" x="30" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="mode1-label" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#333333;" value="模式 1: 轻度风险&#xa;仅增加母线电压&#xa;V_bus += 15V/周期&#xa;（逐级增量, 不超 V_max）" vertex="1">
+          <mxGeometry height="75" width="160" x="35" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-mode1-back" edge="1" parent="1" source="mode1-box" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#d79b00;strokeWidth=1.5;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none" target="start" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="530" />
+              <mxPoint x="10" y="530" />
+              <mxPoint x="10" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-mode1-back-label" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" value="下一采样周期继续监测" vertex="1">
+          <mxGeometry height="40" width="70" x="20" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-mode2" edge="1" parent="1" source="decision-second" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#b85450;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none" target="mode2-box" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-mode2" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#b85450;" value="ΔT &gt; 8°C (高风险)" vertex="1">
+          <mxGeometry height="40" width="120" x="455" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="mode2-box" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="110" width="300" x="300" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="mode2-label" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" value="模式 2: 高度风险 (双机制并行)&lt;br&gt;① 增加母线电压: `V_{bus} += 15V`/周期&lt;br&gt;`P_{loss} ∝ V_{bus}²` → 模块自发热 ↑&lt;br&gt;② 降低风扇转速: fan −= 12%/周期&lt;br&gt;`R_{th}` ↑ → 散热减缓 → 快速升温" vertex="1">
+          <mxGeometry height="100" width="280" x="310" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-mode2-back" edge="1" parent="1" source="mode2-box" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#b85450;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none" target="start" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="555" />
+              <mxPoint x="750" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-mode2-back-label" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" value="闭环反馈:&#xa;持续监测&#xa;直至所有模块&#xa;ΔT ≤ 5°C" vertex="1">
+          <mxGeometry height="60" width="80" x="750" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="note-box" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="150" width="220" x="650" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="note-title" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#333333;" value="关键设计要点" vertex="1">
+          <mxGeometry height="25" width="220" x="650" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="note-content" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#333333;" value="• 逐级增量调节 (`dV_{step}=15V`)&lt;br&gt;   避免电压突变冲击电网&lt;br&gt;• 安全边界: `V_{bus}∈[580,880]V`&lt;br&gt;`Fan∈[15,100]%`&lt;br&gt;• 闭环: 持续监测→调节→再监测&lt;br&gt;   直至所有模块 ΔT ≤ 5°C&lt;br&gt;• 零硬件增量: 仅软件控制&lt;br&gt;   无需加热器/除湿机" vertex="1">
+          <mxGeometry height="105" width="200" x="660" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="fontFamily=宋体;rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="170" width="500" x="30" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" value="专利权利要求映射" vertex="1">
+          <mxGeometry height="25" width="500" x="30" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-content" parent="1" style="fontFamily=宋体;text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#555555;" value="权利要求1-2: S201+S202 + 目标电压 = 母线电压下限值 + 预设参数&#xa;权利要求3:   温差-参数映射关系 (ΔT 越大 → 参数越大 → V_target 越高)&#xa;权利要求4:   闭环调节, 目标电压调节量与ΔT 呈正相关&#xa;权利要求5:   逐级增量, 每采样周期按预设增量调节&#xa;权利要求6-7: 风扇协同控制, 温度-转速映射关系&#xa;权利要求8:   分级温差策略: 第一温差(仅升压) &lt; 第二温差(升压+降风扇)&#xa;权利要求9-11: 功率设备结构: 控制器 + 第一/第二温度采集装置" vertex="1">
+          <mxGeometry height="125" width="480" x="40" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="44agUOQOKKnU4PU8sYiz-1" edge="1" parent="1" source="normal-text" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;labelBackgroundColor=none" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="350.5" as="sourcePoint" />
+            <mxPoint x="10" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44agUOQOKKnU4PU8sYiz-2" edge="1" parent="1" source="mode2-box" style="fontFamily=宋体;endArrow=classic;html=1;strokeColor=#b85450;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;labelBackgroundColor=none" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="640" />
+              <mxPoint x="10" y="640" />
+            </Array>
+            <mxPoint x="450" y="330" as="sourcePoint" />
+            <mxPoint x="10" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
