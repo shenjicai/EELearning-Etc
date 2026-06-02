@@ -218,7 +218,7 @@ sgtitle('防凝露控制策略三路对比 — 专利 CN 121984334 A', ...
        'FontSize', 14, 'FontWeight', 'bold', 'Color', 'k');
 
 % 保存图像
-scriptDir = 'F:\Practices\Claude\功率设备及其控制方法';
+scriptDir = 'F:\Practices\Claude\功率设备及其控制方法\仿真代码';
 saveas(gcf, fullfile(scriptDir, 'strategy_comparison.png'));
 fprintf('\n对比图已保存: strategy_comparison.png\n');
 fprintf('仿真完成。\n');

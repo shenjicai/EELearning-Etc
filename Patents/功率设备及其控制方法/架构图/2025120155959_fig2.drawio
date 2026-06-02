@@ -1,0 +1,47 @@
+<mxGraphModel dx="1200" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="600" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- S201 Box -->
+    <mxCell id="s201_box" value="获取各功率模块的运行温度，以及壳体内的环境温度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=18;fontFamily=SimSun;align=center;verticalAlign=middle;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+      <mxGeometry x="80" y="50" width="800" height="120" as="geometry" />
+    </mxCell>
+
+    <!-- S201 Label -->
+    <mxCell id="s201_label" value="S201" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=none;endFill=0;fontSize=20;fontFamily=Times New Roman;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s201_box" target="s201_text">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="880" y="110" as="sourcePoint" />
+        <mxPoint x="950" y="110" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="s201_text" value="S201" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+      <mxGeometry x="920" y="95" width="80" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow -->
+    <mxCell id="arrow" value="" style="shape=link;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000000;endArrow=classic;endFill=1;" edge="1" parent="1">
+      <mxGeometry width="100" relative="1" as="geometry">
+        <mxPoint x="480" y="170" as="sourcePoint" />
+        <mxPoint x="480" y="240" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- S202 Box -->
+    <mxCell id="s202_box" value="响应于功率设备中存在运行温度与环境温度之间的差值大于&lt;br&gt;预设阈值的功率模块，增加功率设备的母线电压" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=18;fontFamily=SimSun;align=center;verticalAlign=middle;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+      <mxGeometry x="80" y="250" width="800" height="140" as="geometry" />
+    </mxCell>
+
+    <!-- S202 Label -->
+    <mxCell id="s202_label" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=none;endFill=0;fontSize=20;fontFamily=Times New Roman;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s202_box" target="s202_text">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="880" y="320" as="sourcePoint" />
+        <mxPoint x="950" y="320" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="s202_text" value="S202" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+      <mxGeometry x="920" y="305" width="80" height="30" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

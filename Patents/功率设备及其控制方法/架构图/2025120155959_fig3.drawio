@@ -1,0 +1,108 @@
+<mxGraphModel dx="1000" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="800" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Title -->
+    <mxCell id="t_title" value="&lt;b&gt;&lt;u&gt;功率设备10&lt;/u&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+      <mxGeometry x="50" y="20" width="200" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Main Box (Upper Solid) -->
+    <mxCell id="main_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="100" y="80" width="600" height="300" as="geometry" />
+    </mxCell>
+
+    <!-- 101 Arc Label -->
+    <mxCell id="l101_line" value="101" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=classic;endFill=1;fontSize=16;fontFamily=Times New Roman;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="main_box" target="main_box">
+      <mxGeometry x="-0.2" y="20" relative="1" as="geometry">
+        <mxPoint x="400" y="30" as="sourcePoint" />
+        <mxPoint x="520" y="30" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="520" y="30" />
+          <mxPoint x="520" y="60" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Controller -->
+    <mxCell id="ctrl" value="控制器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=SimSun;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="250" y="130" width="300" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 103 Arc Label -->
+    <mxCell id="l103_line" value="103" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=classic;endFill=1;fontSize=16;fontFamily=Times New Roman;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl" target="ctrl">
+      <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+        <mxPoint x="550" y="80" as="sourcePoint" />
+        <mxPoint x="630" y="80" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="630" y="80" />
+          <mxPoint x="630" y="120" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Power Modules -->
+    <mxCell id="pm1" value="功率模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=SimSun;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="160" y="280" width="100" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="pm2" value="功率模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=SimSun;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="290" y="280" width="100" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="pm3" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+      <mxGeometry x="415" y="280" width="50" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="pm4" value="功率模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=SimSun;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="510" y="280" width="100" height="45" as="geometry" />
+    </mxCell>
+
+    <!-- 102 Arc Label -->
+    <mxCell id="l102_line" value="102" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=classic;endFill=1;fontSize=16;fontFamily=Times New Roman;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pm4" target="pm4">
+      <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+        <mxPoint x="610" y="240" as="sourcePoint" />
+        <mxPoint x="690" y="240" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="690" y="240" />
+          <mxPoint x="690" y="260" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Dashed Outer Box -->
+    <mxCell id="dashed_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=12 12;" vertex="1" parent="1">
+      <mxGeometry x="80" y="400" width="640" height="180" as="geometry" />
+    </mxCell>
+
+    <!-- Dashed connection lines from main box to dashed box (left and right) -->
+    <mxCell id="dash_left" value="" style="shape=link;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000000;dashed=1;dashPattern=12 12;endArrow=none;endFill=0;" edge="1" parent="1">
+      <mxGeometry width="100" relative="1" as="geometry">
+        <mxPoint x="100" y="380" as="sourcePoint" />
+        <mxPoint x="100" y="400" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="dash_right" value="" style="shape=link;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#000000;dashed=1;dashPattern=12 12;endArrow=none;endFill=0;" edge="1" parent="1">
+      <mxGeometry width="100" relative="1" as="geometry">
+        <mxPoint x="700" y="380" as="sourcePoint" />
+        <mxPoint x="700" y="400" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Fan Box -->
+    <mxCell id="fan" value="散热风扇" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=SimSun;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="300" y="460" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 104 Arc Label -->
+    <mxCell id="l104_line" value="104" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#000000;endArrow=classic;endFill=1;fontSize=16;fontFamily=Times New Roman;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fan" target="fan">
+      <mxGeometry x="0.2" y="-20" relative="1" as="geometry">
+        <mxPoint x="500" y="560" as="sourcePoint" />
+        <mxPoint x="580" y="560" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="580" y="560" />
+          <mxPoint x="580" y="530" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
